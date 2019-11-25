@@ -118,26 +118,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-var mic = new p5.AudioIn();
-mic.start();
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function setup() {
-  console.log("setup");
-  createCanvas(200, 200);
+var SMOOTH = 0.4;
+
+function getColor(num) {
+  var c = color(255, 204, 0, num % 256);
+  fill(c);
+  noStroke();
 }
 
-function animate() {
-  var micLevel = mic.getLevel();
-  console.log(micLevel);
-  requestAnimationFrame(animate);
-}
+var Star = function Star() {
+  var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Math.random() * innerWidth;
+  var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Math.random() * innerHeight;
+  var diameter = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
 
-function draw() {
-  console.log("draw");
-  background(0);
-  var vol = mic.getLevel();
-  ellipse(100, 100, vol * 200, vol * 200);
-} // animate();
+  _classCallCheck(this, Star);
+
+  getColor(255);
+  console.log("new star");
+  diameter = lerp(diameter, diameter * innerWidth * 5, SMOOTH);
+  circle(x, y, diameter);
+};
+
+window.App = {
+  Star: Star
+};
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -166,7 +172,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58063" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63664" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
