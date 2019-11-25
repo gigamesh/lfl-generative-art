@@ -1,0 +1,455 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20191124.185555.57.0.001.json",
+    "dumpEventTime": "2019-11-24T18:55:55Z",
+    "dumpEventTimeStamp": "1574650555397",
+    "processId": 57,
+    "cwd": "/z/coding_projects/lfl-generative-art",
+    "commandLine": [
+      "node",
+      "/c/Users/mmasu/AppData/Roaming/npm/node_modules/browser-sync/dist/bin.js",
+      "start",
+      "--server",
+      "--files",
+      "**/*",
+      "index.html"
+    ],
+    "nodejsVersion": "v12.11.0",
+    "glibcVersionRuntime": "2.27",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.11.0",
+      "v8": "7.7.299.11-node.12",
+      "uv": "1.32.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1c",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.11.0/node-v12.11.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.11.0/node-v12.11.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.4.0-18362-Microsoft",
+    "osVersion": "#476-Microsoft Fri Nov 01 16:53:00 PST 2019",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 430400,
+        "nice": 0,
+        "sys": 884000,
+        "idle": 10667600,
+        "irq": 217300
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 234500,
+        "nice": 0,
+        "sys": 107900,
+        "idle": 11639600,
+        "irq": 4600
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 1296700,
+        "nice": 0,
+        "sys": 428900,
+        "idle": 10256500,
+        "irq": 4800
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 258200,
+        "nice": 0,
+        "sys": 83200,
+        "idle": 11640400,
+        "irq": 900
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 571400,
+        "nice": 0,
+        "sys": 248200,
+        "idle": 11162500,
+        "irq": 3700
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 580400,
+        "nice": 0,
+        "sys": 232900,
+        "idle": 11168700,
+        "irq": 3200
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 607100,
+        "nice": 0,
+        "sys": 322500,
+        "idle": 11052500,
+        "irq": 4600
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 359300,
+        "nice": 0,
+        "sys": 130100,
+        "idle": 11492600,
+        "irq": 1700
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 591700,
+        "nice": 0,
+        "sys": 326200,
+        "idle": 11064200,
+        "irq": 5000
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 297000,
+        "nice": 0,
+        "sys": 108700,
+        "idle": 11576400,
+        "irq": 4500
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 475700,
+        "nice": 0,
+        "sys": 249200,
+        "idle": 11257100,
+        "irq": 3500
+      },
+      {
+        "model": "       Intel(R) Core(TM) i7-4930K CPU @ 3.40GHz",
+        "speed": 3701,
+        "user": 334300,
+        "nice": 0,
+        "sys": 126500,
+        "idle": 11521200,
+        "irq": 2500
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "eth0",
+        "internal": false,
+        "mac": "74:d4:35:8f:93:21",
+        "address": "192.168.0.12",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "eth0",
+        "internal": false,
+        "mac": "74:d4:35:8f:93:21",
+        "address": "2606:6000:6200:3c00:101a:50b6:21dc:f1ce",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "eth0",
+        "internal": false,
+        "mac": "74:d4:35:8f:93:21",
+        "address": "2606:6000:6200:3c00:f5d1:ad98:23af:20f1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "eth0",
+        "internal": false,
+        "mac": "74:d4:35:8f:93:21",
+        "address": "fe80::101a:50b6:21dc:f1ce",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 11
+      },
+      {
+        "name": "eth2",
+        "internal": false,
+        "mac": "00:15:5d:7e:db:bc",
+        "address": "172.17.197.193",
+        "netmask": "255.255.255.240",
+        "family": "IPv4"
+      },
+      {
+        "name": "eth2",
+        "internal": false,
+        "mac": "00:15:5d:7e:db:bc",
+        "address": "fe80::7c4f:be29:1916:91b8",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 31
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      }
+    ],
+    "host": "DESKTOP-1K5CBKL"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000afd2a5",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [node]"
+    },
+    {
+      "pc": "0x00000000009d41d3",
+      "symbol": "node::OnFatalError(char const*, char const*) [node]"
+    },
+    {
+      "pc": "0x0000000000b3281e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]"
+    },
+    {
+      "pc": "0x0000000000b32b99",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]"
+    },
+    {
+      "pc": "0x0000000000cddeb5",
+      "symbol": " [node]"
+    },
+    {
+      "pc": "0x0000000000cde546",
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [node]"
+    },
+    {
+      "pc": "0x0000000000cea3da",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [node]"
+    },
+    {
+      "pc": "0x0000000000ceb2e5",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]"
+    },
+    {
+      "pc": "0x0000000000cedcf8",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [node]"
+    },
+    {
+      "pc": "0x0000000000cb4627",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType) [node]"
+    },
+    {
+      "pc": "0x0000000000fea55b",
+      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]"
+    },
+    {
+      "pc": "0x000000000136cf99",
+      "symbol": " [node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2168705024,
+    "totalCommittedMemory": 2159088280,
+    "usedMemory": 2148086536,
+    "availableMemory": 44930640,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 32568,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 13631488,
+        "committedMemory": 4532800,
+        "capacity": 6808672,
+        "used": 1472504,
+        "available": 5336168
+      },
+      "old_space": {
+        "memorySize": 2150477824,
+        "committedMemory": 2150391824,
+        "capacity": 2146341432,
+        "used": 2142895480,
+        "available": 3445952
+      },
+      "code_space": {
+        "memorySize": 688128,
+        "committedMemory": 552640,
+        "capacity": 492640,
+        "used": 492640,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1052672,
+        "committedMemory": 985680,
+        "capacity": 664320,
+        "used": 664320,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 2543616,
+        "committedMemory": 2543616,
+        "capacity": 2525744,
+        "used": 2525744,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3552,
+        "used": 3552,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 6808672,
+        "used": 0,
+        "available": 6808672
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 84.6719,
+    "kernelCpuSeconds": 28.9062,
+    "cpuConsumptionPercent": 18.0569,
+    "maxRss": 2691903488,
+    "pageFaults": {
+      "IORequired": 0,
+      "IONotRequired": 766895
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 29.3594,
+    "kernelCpuSeconds": 6.375,
+    "cpuConsumptionPercent": 5.68114,
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "USER": "masurka",
+    "SHLVL": "1",
+    "HOME": "/home/masurka",
+    "WSL_DISTRO_NAME": "Ubuntu",
+    "LOGNAME": "masurka",
+    "NAME": "DESKTOP-1K5CBKL",
+    "_": "/c/Users/mmasu/AppData/Roaming/npm/browser-sync",
+    "TERM": "xterm-256color",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/c/ProgramData/DockerDesktop/version-bin:/c/Program Files/Docker/Docker/Resources/bin:/c/Python27/:/c/Python27/Scripts:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/c/Program Files/Android/Android Studio/jre/lib:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/:/c/Windows/System32/OpenSSH/:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/Git/cmd:/c/Users/mmasu/AppData/Local/Android/Sdk/platform-tools:/c/Program Files (x86)/Yarn/bin/:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs/:/c/Program Files/Amazon/AWSCLI/bin/:/c/Program Files (x86)/Boxcryptor/bin/:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/c/WINDOWS/System32/OpenSSH/:/c/Ruby24-x64/bin:/c/Users/mmasu/AppData/Local/Microsoft/WindowsApps:/c/Users/mmasu/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/mmasu/AppData/Local/Yarn/bin:/c/Users/mmasu/AppData/Local/Google/Cloud SDK/google-cloud-sdk/bin:/c/Program Files/MongoDB/Server/4.0/bin/:/c/Program Files/heroku/bin:/c/Users/mmasu/AppData/Roaming/npm:/c/Program Files/Amazon/AWSCLI/bin/:/snap/bin",
+    "DISPLAY": "localhost:0.0",
+    "LANG": "C.UTF-8",
+    "SHELL": "/bin/bash",
+    "DOCKER_HOST": "localhost:2375",
+    "PWD": "/z/coding_projects/lfl-generative-art",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "HOSTTYPE": "x86_64",
+    "WSLENV": ""
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": 8388608
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 7823,
+      "hard": 7823
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}
