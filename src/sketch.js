@@ -15,26 +15,31 @@ function getColor(num) {
 }
 
 function getRadius(r, i) {
-  return (r * 10) / (i + 1)
+  return (r * 2) / (i + 1)
 }
 
+let count
+
 window.draw = () => {
+  count++
   background(0);
   const vol = mic.getLevel();
 
-  if (starVectors.length == 250) {
-    starVectors.shift();
-  } else {
-    getColor(255);
+  if (count == 200) {
+    frameRate(0)
+  }
 
+  if (starVectors.length == 50) {
+    starVectors.pop();
+  } else {
     const radius = vol * innerWidth * 5;
     const vector = { x: Math.random() * innerWidth, y: Math.random() * innerHeight, rad: radius || 0.1 }
-    starVectors.push(vector);
+    starVectors.unshift(vector);
 
-    // console.log(starVectors[0].rad)
-    // frameRate(0)
+    // console.log(JSON.stringify(starVectors, null, 2))
+    frameRate(1)
     starVectors.forEach(({ x, y, rad }, i) => {
-      getColor(i * 10)
+      getColor(i * 20)
       const newRad = getRadius(rad, i)
       starVectors[i].rad = newRad
       circle(

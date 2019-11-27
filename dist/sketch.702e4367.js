@@ -135,31 +135,37 @@ function getColor(num) {
 }
 
 function getRadius(r, i) {
-  return r * 10 / (i + 1);
+  return r * 2 / (i + 1);
 }
 
+var count;
+
 window.draw = function () {
+  count++;
   background(0);
   var vol = mic.getLevel();
 
-  if (starVectors.length == 250) {
-    starVectors.shift();
+  if (count == 200) {
+    frameRate(0);
+  }
+
+  if (starVectors.length == 50) {
+    starVectors.pop();
   } else {
-    getColor(255);
     var radius = vol * innerWidth * 5;
     var vector = {
       x: Math.random() * innerWidth,
       y: Math.random() * innerHeight,
       rad: radius || 0.1
     };
-    starVectors.push(vector); // console.log(starVectors[0].rad)
-    // frameRate(0)
+    starVectors.unshift(vector); // console.log(JSON.stringify(starVectors, null, 2))
 
+    frameRate(1);
     starVectors.forEach(function (_ref, i) {
       var x = _ref.x,
           y = _ref.y,
           rad = _ref.rad;
-      getColor(i * 10);
+      getColor(i * 20);
       var newRad = getRadius(rad, i);
       starVectors[i].rad = newRad;
       circle(x, y, newRad);
@@ -194,7 +200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61053" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61587" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
