@@ -10,41 +10,6 @@
   <body>
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js" type="text/javascript"></script>
-    <script>var SMOOTH = 0.4;
-var MID_X = innerWidth / 2;
-var MID_Y = innerHeight / 2;
-var dots = [];
-var mic;
-var radius = 0;
-
-function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
-  mic = new p5.AudioIn();
-  mic.start();
-  background(0);
-}
-
-function getColor(num) {
-  var c = color(255, 204, 0, num % 256);
-  fill(c);
-  noStroke();
-}
-
-function draw() {
-  var vol = mic.getLevel();
-
-  if (dots.length > 255) {
-    dots.shift();
-  } else {
-    getColor(255);
-    radius = lerp(radius, vol * innerWidth * 5, SMOOTH);
-    var dot = ellipse(Math.random() * innerWidth, Math.random() * innerHeight, radius, radius);
-    dots.push(dot);
-  } // dots.forEach((dot, i) => {
-  //   getColor(i);
-  //   dot.render();
-  // });
-
-}</script>
+    <script src="/sketch.702e4367.js"></script>
   </body>
 </html>

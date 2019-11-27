@@ -118,25 +118,54 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"sketch.js":[function(require,module,exports) {
-function setup() {
-  console.log("setup");
-  createCanvas(200, 200);
-}
+var SMOOTH = 0.4;
+var starVectors = [];
+var mic;
 
-function animate() {
-  var micLevel = mic.getLevel();
-  console.log(micLevel);
-  requestAnimationFrame(animate);
-}
-
-function draw() {
-  console.log("draw");
-  var mic = new p5.AudioIn();
+window.setup = function () {
+  createCanvas(window.innerWidth, window.innerHeight);
+  mic = new p5.AudioIn();
   mic.start();
+};
+
+function getColor(num) {
+  var c = color(255, 204, 0, num % 256);
+  fill(c);
+  noStroke();
+}
+
+function getRadius(r, i) {
+  return r * 10 / (i + 1);
+}
+
+window.draw = function () {
   background(0);
   var vol = mic.getLevel();
-  ellipse(100, 100, vol * 200, vol * 200);
-} // animate();
+
+  if (starVectors.length == 250) {
+    starVectors.shift();
+  } else {
+    getColor(255);
+    var radius = vol * innerWidth * 5;
+    var vector = {
+      x: Math.random() * innerWidth,
+      y: Math.random() * innerHeight,
+      rad: radius || 0.1
+    };
+    starVectors.push(vector); // console.log(starVectors[0].rad)
+    // frameRate(0)
+
+    starVectors.forEach(function (_ref, i) {
+      var x = _ref.x,
+          y = _ref.y,
+          rad = _ref.rad;
+      getColor(i * 10);
+      var newRad = getRadius(rad, i);
+      starVectors[i].rad = newRad;
+      circle(x, y, newRad);
+    });
+  }
+}; // animate();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -165,7 +194,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61983" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61053" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
