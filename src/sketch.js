@@ -27,7 +27,7 @@ window.draw = () => {
   if (starVectors.length == 1000) {
     starVectors.pop();
   }
-  const radius = vol * innerWidth / (Math.random() + 1);
+  const radius = vol * innerWidth * 50;
   const vector = { x: Math.random() * innerWidth, y: Math.random() * innerHeight, rad: radius || .5, age: 0 }
   starVectors.unshift(vector);
   starVectors.forEach(({ x, y, rad, age }, i) => {

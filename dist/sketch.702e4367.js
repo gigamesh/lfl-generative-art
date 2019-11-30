@@ -148,7 +148,7 @@ window.draw = function () {
     starVectors.pop();
   }
 
-  var radius = vol * innerWidth / (Math.random() + 1);
+  var radius = vol * innerWidth * 50;
   var vector = {
     x: Math.random() * innerWidth,
     y: Math.random() * innerHeight,
@@ -195,7 +195,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56553" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64756" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
